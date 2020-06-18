@@ -17,20 +17,20 @@
 // Define the array of leds
 CRGB leds[NUM_LEDS];
 
-int shockPin = 7; // Use Pin 10 as our Input
+int shockPin = 7; // Use Pin 7 as our sensor Input
 int shockVal = HIGH; // This is where we record our shock measurement
-boolean bAlarm = false;
+boolean bAlarm = false; //A flag to indicate the alarm is triggered 
 
 unsigned long lastShockTime; // Record the time that we measured a shock
 
-int delayMS = 3;
+int delayMS = 3; //Delay for each LED color change iteration
 int breatheDelay = 10; //Rate of breathing
 int shockAlarmTime = delayMS * 255 + 4000; // Number of milli seconds to keep the shock alarm high
 
 int isBreathing = 1; //used for interrption
 int lastBrightness = 0; //Remember the brightness before interuption
-int val; //loop
-int wakeDelay = 200;
+int val; //loop var only
+int wakeDelay = 200; //delay for the wake up flash check
 void setup ()
 {
   Serial.begin(9600);
