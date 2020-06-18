@@ -1,3 +1,10 @@
+// HARDWARE:
+// WS2813 / WS2812 RGB LED Strip: 14 LEDS used
+// KY002 vibration sensor x 1
+// Arudino Micro : x 1
+// 
+
+
 #include <FastLED.h>
 
 #define NUM_LEDS 14
